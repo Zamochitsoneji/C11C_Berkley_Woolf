@@ -1,4 +1,7 @@
 import javax.swing.JPanel;
+
+import com.sun.org.apache.bcel.internal.generic.SWAP;
+
 import java.awt.*;
 import java.awt.geom.*;
 
@@ -43,7 +46,15 @@ public class Cat {
 		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
 		
 		int[] triX = {HEAD_DIMENSION/2,2*HEAD_DIMENSION/3,HEAD_DIMENSION};
-		int[] triY = {6*HEAD_DIMENSION/7,HEAD_DIMENSION/3,3*HEAD_DIMENSION/6};
+		int[] triY = {8*HEAD_DIMENSION/9,HEAD_DIMENSION/3,3*HEAD_DIMENSION/6};
+		g2.setColor(Color.white);
+		g2.fillPolygon(triX, triY, 3);
+		
+		triX[1] =85;
+		for(int i  = 0; i < triX.length; i++)
+			triX[i] += HEAD_DIMENSION/2;
+		triY[0] = 3*HEAD_DIMENSION/6;
+		triY[2]=8*HEAD_DIMENSION/9;
 		g2.setColor(Color.white);
 		g2.fillPolygon(triX, triY, 3);
 		
