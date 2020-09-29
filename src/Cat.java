@@ -1,6 +1,5 @@
 import javax.swing.JPanel;
 
-import com.sun.org.apache.bcel.internal.generic.SWAP;
 
 import java.awt.*;
 import java.awt.geom.*;
@@ -33,7 +32,7 @@ public class Cat {
 		g2.setColor(Color.white);
 		g2.fillOval(x, y, HEAD_DIMENSION, (int)(HEAD_DIMENSION/1.1));
 		// Draw the eyes
-		g2.setColor(Color.cyan);
+		g2.setColor(Color.green);
 		x = catX + EYE_X; 
 		y = catY + EYE_Y;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
